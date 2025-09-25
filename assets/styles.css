@@ -1,0 +1,255 @@
+    *{/* Aplica a todos los elementos */
+        box-sizing: border-box;/* Incluye el padding y el borde en el tamaño total del elemento */
+        margin: 0;/* Quita el margen por defecto */
+        padding: 0;/* Quita el padding por defecto */
+    }
+    #hero{
+        text-align: center;
+        margin: 20px 0;
+        
+    }
+    .container {
+        display: grid;/* Usa grid layout para la estructura principal */
+        grid-template-rows: auto 1fr auto;/* Tres filas: header, main, footer */
+        
+    }
+    nav ul {/* Aplica a la lista dentro de la barra de navegación */
+        display: flex;/* Usa flexbox para distribuir los elementos */
+        justify-content: space-around;/* Espacio uniforme entre los elementos */
+        gap: 20px;/* Espacio entre los elementos */
+    /* otras propiedades... */
+    }
+    .catalogo {/* Aplica al contenedor del catálogo de productos */
+        display: grid;/* Usa grid layout para el catálogo de productos */
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));/* Columnas responsivas */
+        gap: 100px;/* Espacio entre los productos */
+        padding: 20px;/* Espaciado interno */
+        
+    }
+    .producto {/* Aplica a cada producto individual */
+        display: flex;/* Usa flexbox para el diseño interno del producto */
+        flex-direction: column;/* Coloca los elementos en columna */
+        align-items: center;/* Centra los elementos horizontalmente */
+        justify-content: space-between;/* Espacio entre los elementos */
+        background-color: white;/* Fondo blanco para cada producto */
+        border: 1px solid #111010;/* Borde alrededor del producto */
+        border-radius: 8px;/* Bordes redondeados */
+        padding: 15px;/* Espaciado interno */
+        text-align: center;/* Centra el texto */
+    }
+    .producto img { /* Aplica a las imágenes dentro de cada producto */
+        max-width: 100%;/* La imagen no excede el ancho del contenedor */
+        height: auto;/* Mantiene la proporción de la imagen */
+        border-radius: 5px;/* Bordes redondeados para la imagen */
+    }
+    body {/* Aplica al cuerpo del documento */
+        font-family: Arial, sans-serif; /* Puedes elegir la fuente que prefieras */
+        background-color: #0c0c0c; /* Un color de fondo suave para las páginas */
+        color: #333; /* Color de texto principal */
+    }
+
+    a {/* Aplica a todos los enlaces */
+        text-decoration: none; /* Quita el subrayado de los enlaces */
+        color: black; /* Un color de enlace que combine con la temática de pizza, como el rojo */
+    }
+
+    a:hover {/* Aplica a los enlaces cuando se pasa el cursor sobre ellos */
+        text-decoration: underline; /* Agrega un subrayado al pasar el cursor */
+    }
+    header {
+        background-color: #d9534f; /* Color de fondo del encabezado */
+        color: black; /* Color del texto en el encabezado */
+        padding: 10px 0; /* Espaciado interno */
+        text-align: center; /* Centra el texto */
+    }
+    header h1 {
+        margin: 0; /* Quita el margen por defecto */
+    }
+    nav {
+        background-color: #f7f7f7; /* Color de fondo de la barra de navegación */
+        padding: 10px 0; /* Espaciado interno */
+        border-bottom: 1px solid #ccc; /* Línea inferior para separar la barra */
+        
+    }
+    nav ul {
+        list-style: none; /* Quita los puntos de la lista */
+        display: flex; /* Usa flexbox para distribuir los elementos */
+        justify-content: center; /* Centra los elementos horizontalmente */
+        gap: 20px; /* Espacio entre los elementos */
+    }
+    nav ul li {
+        margin: 0 15px; /* Espaciado entre los elementos de la lista */
+    }
+    nav ul li a {
+        color: #d9534f; /* Color de los enlaces */
+        font-weight: bold; /* Texto en negrita */
+    }
+    nav ul li a:hover {
+        color: #c9302c; /* Color al pasar el cursor */
+    }
+    main {
+        padding: 20px; /* Espaciado interno */
+        background-color: rgb(27, 192, 60); /* Fondo blanco para el contenido principal */
+        flex: 1; /* Permite que el main crezca para llenar el espacio disponible */
+    }
+    main h2 {
+        color: #d9534f; /* Color de los títulos secundarios */
+        margin-bottom: 20px; /* Espacio debajo del título */
+    }
+    footer {
+        background-color: #d9534f; /* Color de fondo del pie de página */
+        color: black; /* Color del texto en el pie de página */
+        text-align: center; /* Centra el texto */
+        padding: 10px 0; /* Espaciado interno */
+            border-top: 1px solid #ccc; /* Línea superior para separar el pie de página */
+            width: 100%;
+        }
+        footer p {
+            margin: 0; /* Quita el margen por defecto */
+        }
+        button {
+            background-color: #d9534f; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            border: none; /* Quita el borde por defecto */
+            padding: 10px 20px; /* Espaciado interno */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+            font-size: 16px; /* Tamaño de fuente */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+        }
+        button:hover {
+            background-color: #c9302c; /* Color al pasar el cursor */
+        
+        }
+        select {
+            padding: 5px; /* Espaciado interno */
+            font-size: 16px; /* Tamaño de fuente */
+            border: 1px solid #ccc; /* Borde del select */
+            border-radius: 5px; /* Bordes redondeados */
+            margin-right: 10px; /* Espacio a la derecha */
+        }
+        .marca{
+        font-size: 5rem;
+        font-family: 'Courier New', Courier, monospace;
+        font-style: initial;
+
+        }
+        .textarea-fijo {
+                    width: 80dvh;
+                    height: 10dvh;
+                    resize: none;
+                }
+
+        .contact-container{
+            flex: content;
+        }        
+
+            #verificarBtn {
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff8e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #verificarBtn:hover {
+            background-color: #0057b3b1;
+        }
+
+        /* Botones del carrito */
+    .acciones-carrito {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+    }
+
+    .acciones-carrito button {
+    background: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    }
+
+    .acciones-carrito button:hover {
+    opacity: 0.85;
+    }
+
+    #btn-comprar {
+    background: #28a745; /* verde */
+    }
+    #btn-comprar:hover {
+    background: #218838; /* verde oscuro al pasar el cursor */
+    }
+
+    .contact-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    }
+
+    .contact-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    }
+
+    .contact-container button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    }
+
+    .contact-container button:hover {
+    opacity: 0.9;
+    }
+    /* ---- Estilos para el badge (el numerito del carrito) ---- */
+    .cart-badge {
+    /* Añade estos estilos si quieres que tu contador-carrito se vea como el del demo */
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    border-radius: 999px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    background: #e11d48;
+    color: #fff;
+    font-weight: 700;
+    display: inline-block;
+    }
+
+    /* ---- Cuando el badge recibe la clase .bump, corre la animación ---- */
+    .cart-badge.bump {
+    animation: cart-bump 500ms ease-out;
+    }
+
+    /* ---- Pasos de la animación del rebote ---- */
+    @keyframes cart-bump {
+    0%   { transform: scale(1); }
+    20%  { transform: scale(1.35); }
+    40%  { transform: scale(0.8); }
+    60%  { transform: scale(1.2); }
+    80%  { transform: scale(0.9); }
+    100% { transform: scale(1); }
+    }

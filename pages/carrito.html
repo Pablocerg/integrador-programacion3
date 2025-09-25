@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Carrito | Pizzería |</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon_io/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="marca">Carrito</h1>
+            <img src="../assets/img/carrito.png" alt="logo" width="150" height="150" class="d-inline-block align-text-top">
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html"><button>Inicio</button></a></li>
+                <li><a href="productos.html"><button>Productos</button></a></li>
+                <li><a href="../pages/contactanos.html"><button>Contáctanos</button></a></li>
+                <li><button>Carrito</button></li>
+                <img src="../assets/img/carrito.png" alt="Carrito" width="40" height="40">
+                <span id="contador-carrito" class="cart-badge">0</span>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Tu Carrito de Compras</h2>
+            <div id="lista-carrito">
+                </div>
+            <div id="total-carrito">
+                </div>
+                    <div class="acciones-carrito">
+                        <button id="btn-vaciar">Vaciar carrito</button>
+                        <button id="btn-comprar">Aceptar compra</button>
+                    </div>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2025 | Pizzería |</p>
+        </footer>
+    </div>
+    <script type="module" src="../assets/js/mostrarCarrito.js"></script>
+
+</body>
+</html>
