@@ -1,4 +1,3 @@
-// assets/js/carrito.js
 import { getProductById, updateProductStock } from "./productStore.js";
 const CART_KEY = "carrito";
 
