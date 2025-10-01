@@ -1,4 +1,3 @@
-    // assets/js/productStore.js
     import { initialProductos } from "./data.js";
     const KEY = "productos";
 

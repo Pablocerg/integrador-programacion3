@@ -1,38 +1,48 @@
-    <!-- pages/producto.html -->
-    <!doctype html>
-    <html lang="es">
-    <head>
-    <meta charset="utf-8">
-    <title>Producto | Pizzería</title>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactanos | Pizzería |</title>
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon_io/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../assets/styles.css">
-    </head>
-    <body>
-            
-        <div class="container">
-        <header>
-            <h1 class="marca">Ver detalles</h1>
-            <img src="../assets/img/image-5.png" alt="logo" width="150" height="150" class="d-inline-block align-text-top">
-        </header>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1 class="marca">Contactanos</h1>
+        <img src="../assets/img/image-4.png" alt="logo" width="150" height="150" class="d-inline-block align-text-top">
+    </header>
 
-        <nav>
-            <ul>
-                <li><a href="../index.html"><button>Inicio</button></a></li>
-                <li><a href="productos.html"><button>Productos</button></a></li>
-                <li><a href="carrito.html"><button>Carrito</button></a></li>
-                <img src="../assets/img/carrito.png" alt="Carrito" width="40" height="40">
-                <span id="contador-carrito" class="cart-badge">0</span>
-            </ul>
-        </nav>
+    <nav>
+        <ul>
+            <li><a href="../index.html"><button>Inicio</button></a></li>
+            <li><a href="productos.html"><button>Productos</button></a></li>
+            <li><a href="carrito.html"><button>Carrito</button></a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section id="detalleProducto"></section>
-    </main>
-    <footer>
-        <p>&copy; 2025 | Pizzería |</p>
-    </footer>
-    </div>
+        <div class="contact-container">
+            <h2>Formulario de contacto</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
 
-    <script type="module" src="../assets/js/detalle.js"></script>
-    </body>
-    </html>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 | Pizzería | </p>
+    </footer>
+</div>
+</body>
+</html>

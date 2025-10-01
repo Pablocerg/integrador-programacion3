@@ -1,4 +1,3 @@
-    // assets/js/catalogo.js
     import { getProducts } from "./productStore.js";
     import { addToCart, updateCartCounter } from "./carrito.js";
 

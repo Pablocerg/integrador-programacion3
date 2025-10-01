@@ -1,59 +1,55 @@
-    <!doctype html>
-    <html lang="es">
+<!doctype html>
+<html lang="es">
 
-    <head>
-        <meta charset="utf-8">
-        <title> Productos | Pizzería |</title>
-        <link rel="icon" type="image/x-icon" href="../assets/img/favicon_io/favicon.ico">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../assets/styles.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Productos | Pizzería |</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon_io/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
 
-    <body>
-        
-            <div class="container">
-            
-            <header><!-- header común -->
-            <h1 class="marca">Productos</h1>
-            <img src="../assets/img/image-2.png" alt="logo" width="150" height="150" class="d-inline-block align-text-top">
-            </header>
+<body>
+<div class="container">
+    <header>
+        <h1 class="marca">Productos</h1>
+        <img src="../assets/img/image-2.png" alt="logo" width="150" height="150" class="d-inline-block align-text-top">
+    </header>
 
-        <nav><!-- Barra de navegación -->
-                <ul>
-                    <li><a href="../index.html"><button>Inicio</button></a></li>
-                    <li><a href="#"><button>Productos</button></a></li>
-                    <li><a href="../pages/contactanos.html"><button>Contáctanos</button></a></li>
-                    <li><a href="../pages/carrito.html"><button>Carrito</button></a></li>
-                        <img src="../assets/img/carrito.png" alt="Carrito" width="40" height="40">
-                        <span id="contador-carrito" class="cart-badge">0</span>
+    <nav>
+        <ul>
+            <li><a href="../index.html"><button>Inicio</button></a></li>
+            <li><a href="#"><button>Productos</button></a></li>
+            <li><a href="../pages/contactanos.html"><button>Contáctanos</button></a></li>
+            <li><a href="../pages/carrito.html"><button>Carrito</button></a></li>
+            <img src="../assets/img/carrito.png" alt="Carrito" width="40" height="40">
+            <span id="contador-carrito" class="cart-badge">0</span>
+        </ul>
+    </nav>
 
-                </ul>
-
-        </nav>
-        
-            <main> <!-- Contenido principal -->
-            <h2>Catálogo completo</h2>
-            <p>Explora nuestra variedad de pizzas, desde las clásicas hasta las más innovadoras.</p>
-            <label for="categoria-filtro">Filtrar por categoría:</label>
-    <select id="categoria-filtro">
-        <option value="todas">Todas</option>
-        <option value="clasicas">Pizzas Clásicas</option>
-        <option value="especiales">Pizzas Especiales</option>
-        <option value="vegetarianas">Pizzas Vegetarianas</option>
-        <option value="calzones">Calzones</option>
-    </select>
-    <button type="button">Aplicar</button>
-    <div class ="catalogo">
-    </div>
-            </main>
-        
-            <footer><!-- footer común -->
-            <p>&copy; 2025 | Pizzería |</p>
-            </footer>
+    <main>
+        <h2>Catálogo completo</h2>
+        <p>Explora nuestra variedad de pizzas, desde las clásicas hasta las más innovadoras.</p>
+        <label for="categoria-filtro">Filtrar por categoría:</label>
+        <select id="categoria-filtro">
+            <option value="todas">Todas</option>
+            <option value="clasicas">Pizzas Clásicas</option>
+            <option value="especiales">Pizzas Especiales</option>
+            <option value="vegetarianas">Pizzas Vegetarianas</option>
+            <option value="calzones">Calzones</option>
+        </select>
+        <button type="button">Aplicar</button>
+        <div class="catalogo">
         </div>
-        
-        <script type="module" src="../assets/js/catalogo.js"></script>
-        
-    </body>
+    </main>
 
-    </html>
+    <footer>
+        <p>&copy; 2025 | Pizzería |</p>
+    </footer>
+</div>
+
+<script type="module" src="../assets/js/catalogo.js"></script>
+
+</body>
+
+</html>

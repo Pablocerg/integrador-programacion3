@@ -1,4 +1,3 @@
-        // assets/js/mostrarCarrito.js
     import { getCart, saveCart } from "./carrito.js";
     import { updateCartCounter } from "./carrito.js";
 
