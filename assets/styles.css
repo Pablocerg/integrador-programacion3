@@ -66,9 +66,10 @@
         margin: 0; /* Quita el margen por defecto */
     }
     nav {
-        background-color: #f7f7f7; /* Color de fondo de la barra de navegación */
-        padding: 10px 0; /* Espaciado interno */
-        border-bottom: 1px solid #ccc; /* Línea inferior para separar la barra */
+        background-color: #000000;
+            padding: 10px 0;
+            border-bottom: 1px solid #000000;
+
         
     }
     nav ul {
@@ -253,3 +254,140 @@
     80%  { transform: scale(0.9); }
     100% { transform: scale(1); }
     }
+
+
+       
+.menu-toggle {
+   
+    display: none;
+}
+
+.nav-links {
+    
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+   
+   
+    @media (max-width: 768px) {
+   
+    
+    nav {
+        display: flex;        
+        justify-content: center;
+        align-items: center;    
+        flex-direction: column;  
+        position: relative;
+       
+    }
+   
+   
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+   
+    
+    #main-menu {
+        display: none !important; 
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #d9534f;
+        border-top: 1px solid #d9534f;
+        z-index: 10;
+        /* Estilos base */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+   
+    
+    #main-menu.active { 
+        display: flex !important;
+    }
+   
+    
+    .nav-links li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    
+    .nav-links li button {
+        background-color: transparent;
+        color: rgb(253, 253, 253);
+        border: none;
+    }
+    .nav-links li button:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    }
+
+@media (max-width: 1200px) {
+
+    .catalogo {
+        gap: 75px;
+        padding: 15px;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+   
+    
+    nav ul {
+        gap: 10px;}
+
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    .catalogo {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 50px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    
+    header h1.marca {
+        font-size: 3rem;
+    }
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    main {
+        padding: 10px;
+    }
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    
+    .catalogo {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+}
