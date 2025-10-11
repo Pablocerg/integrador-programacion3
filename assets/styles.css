@@ -391,3 +391,11 @@
         padding: 10px;
     }
 }
+
+
+nav ul a button {
+    
+    border-radius: 8px; 
+    border: none; 
+}
+

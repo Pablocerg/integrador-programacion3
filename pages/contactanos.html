@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactanos | Pizzería |</title>
+    <title>Contacto y Ubicación | Pizzería Artesanal</title>
+    <meta name="description" content="Contáctanos para realizar tu pedido o consulta. Encuentra nuestra dirección y horarios de atención en esta página.">
+    <meta name="keywords" content="contacto pizzería, dirección, horarios, hacer pedido, teléfono">
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon_io/favicon.ico">
     <link rel="stylesheet" href="../assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> 
 </head>
 <body>
-<div class="container">
+
     <header>
-        <h1 class="marca">Contactanos</h1>
-        <img src="../assets/img/image-4.png" alt="logo" width="150" height="150" class="d-inline-block align-text-top">
+        <h1 class="marca"><strong>Contáctanos</strong></h1>
+        <img src="../assets/img/image-4.png" alt="Icono logo pizzería" width="150" height="150" class="d-inline-block align-text-top">
     </header>
 
     <nav>
@@ -24,8 +29,10 @@
     </nav>
 
     <main>
-        <div class="contact-container">
-            <h2>Formulario de contacto</h2>
+
+        <!--<div class="contact-container">
+            
+
             <form>
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -37,8 +44,47 @@
                 <textarea id="mensaje" name="mensaje" required></textarea>
 
                 <button type="submit">Enviar</button>
-            </form>
+            </form>-->
+
+            
+    <div class="row justify-content-center pt-5">
+        
+        <div class="col-lg-6 col-md-8">
+            
+            <div class="text-center mb-4">
+                <h1 class="text-dark">Contacto</h1> 
+                <p class="lead text-dark">¿Tenés alguna duda o consulta? Completá el formulario y te responderemos a la brevedad.</p>
+            </div>
+
+            <div class="p-4 border rounded shadow-sm bg-white">
+                <form action="#" method="POST">
+                    
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label fw-bold">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label fw-bold">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label fw-bold">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu consulta..." required></textarea>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-dark btn-lg">Enviar mensaje</button>
+                    </div>
+                </form>
+            </div>
         </div>
+    </div>
+</main>
+
+ 
+        
     </main>
 
     <footer>
