@@ -399,3 +399,229 @@ nav ul a button {
     border: none; 
 }
 
+
+
+
+/* -------------------------------------- */
+/* ---- ESTILOS PARA LA VISTA CARRITO ---- */
+/* -------------------------------------- */
+
+/* Layout principal: Lista (izquierda) y Resumen (derecha) */
+.carrito-contenido {
+    display: flex;
+    gap: 30px; /* Espacio entre la lista y el resumen */
+    margin-top: 20px;
+}
+
+/* El 70% para la tabla de productos, el 30% para el resumen */
+#lista-carrito {
+    flex: 3; /* Ocupa más espacio */
+    min-width: 0; /* Asegura el correcto encogimiento en flex */
+}
+
+.carrito-resumen {
+    flex: 1; /* Ocupa menos espacio */
+    background-color: #f7f7f7; /* Fondo del resumen */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    height: fit-content; /* Se ajusta a su contenido */
+    max-width: 350px; /* Límite de ancho para el resumen */
+}
+
+.carrito-resumen h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Estilos de la cabecera de la tabla de resumen (Vaciar carrito) */
+.resumen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.btn-vaciar-top {
+    background-color: #dc3545; /* Rojo de "Vaciar carrito" */
+    padding: 5px 10px;
+    font-size: 0.85rem;
+}
+.btn-vaciar-top:hover {
+    background-color: #c82333;
+}
+
+/* Estilos para la tabla de productos */
+.tabla-carrito {
+    width: 100%;
+    border-collapse: collapse; /* Bordes de tabla sencillos */
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; /* Para que los bordes redondeados se apliquen al contenido */
+}
+
+.tabla-carrito th, .tabla-carrito td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.tabla-carrito th {
+    background-color: #f0f0f5; /* Fondo del encabezado de la tabla */
+    color: #333;
+    font-weight: 600;
+}
+
+/* Estilo para la primera columna (Producto) */
+.producto-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.producto-info img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.producto-info-texto p {
+    margin: 0;
+    line-height: 1.4;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.producto-nombre {
+    font-weight: bold;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Estilos para el control de cantidad (+/-) */
+.control-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.control-cantidad input {
+    width: 40px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.control-cantidad button {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    font-size: 1rem;
+    line-height: 1;
+    border-radius: 4px;
+}
+.control-cantidad button:hover {
+    background-color: #eee;
+}
+
+/* Icono de papelera (eliminar) */
+.btn-eliminar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    font-size: 1.2rem;
+    padding: 0;
+}
+.btn-eliminar:hover {
+    color: #dc3545;
+}
+
+/* Estilos del resumen (Totales y acciones inferiores) */
+#total-carrito p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+#total-carrito .resumen-total {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #000;
+}
+
+.acciones-resumen {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.acciones-resumen #btn-comprar {
+    background: #007bff; /* Azul oscuro como el de la imagen */
+    font-weight: 600;
+    width: 100%;
+}
+
+.btn-seguir-comprando {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    color: #007bff;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.btn-seguir-comprando:hover {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Ocultar botones de acciones-carrito que ya están en el resumen */
+.acciones-carrito {
+    display: none;
+}
+
+
+/* Adaptar el layout a móviles */
+@media (max-width: 992px) {
+    .carrito-contenido {
+        flex-direction: column; /* Apila la lista y el resumen en móviles */
+    }
+    
+    .carrito-resumen {
+        max-width: 100%; /* El resumen ocupa todo el ancho */
+    }
+
+    .tabla-carrito thead {
+        display: none; /* Ocultar encabezados de tabla */
+    }
+    
+    .tabla-carrito tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+    
+    .tabla-carrito td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px;
+        border-bottom: none;
+    }
+
+    .tabla-carrito td:before {
+        content: attr(data-label); /* Usa el atributo data-label para mostrar el título de la columna */
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 10px;
+    }
+}

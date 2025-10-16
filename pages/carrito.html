@@ -23,23 +23,39 @@
                 <li><a href="productos.html"><button>Productos</button></a></li>
                 <li><a href="../pages/contactanos.html"><button>Contáctanos</button></a></li>
 
-                <li><a href="#" aria-label="Ver Carrito de compras" role="link"></a><button>Carrito</button></li>
-                <img src="../assets/img/carrito.png" alt="Icono Carrito de compras" width="40" height="40">
+                <li><a href="#" aria-label="Ver Carrito de compras" role="link">
+                <img src="../assets/img/carrito.png" alt="Icono Carrito de compras" width="40" height="40"></a></li>
                 <span id="contador-carrito" class="cart-badge">0</span>
                 
             </ul>
         </nav>
 
         <main>
-            <h2>Tu Carrito de Compras</h2>
-            <div id="lista-carrito">
-                </div>
+            <main>
+    <h2>Tu Carrito de Compras</h2>
+
+    <div class="carrito-contenido"> 
+
+        <section id="lista-carrito">
+            </section>
+
+        <aside class="carrito-resumen">
+            <div class="resumen-header">
+                <h3>Resumen</h3>
+                <button id="btn-vaciar" class="btn-vaciar-top">Vaciar carrito</button>
+            </div>
+            
             <div id="total-carrito">
                 </div>
-                    <div class="acciones-carrito">
-                        <button id="btn-vaciar">Vaciar carrito</button>
-                        <button id="btn-comprar">Aceptar compra</button>
-                    </div>
+            
+            <div class="acciones-resumen">
+                <button id="btn-comprar">Aceptar compra</button>
+                <a href="productos.html" class="btn-seguir-comprando">Seguir comprando</a>
+            </div>
+        </aside>
+
+    </div>
+</main>
 
         </main>
 

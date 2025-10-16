@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Detalles del Producto | Pizzería Artesanal</title>
-    <meta name="description" content="Mira los detalles, ingredientes y precio de esta deliciosa pizza de masa madre. ¡Añádela a tu carrito!">
-    <meta name="keywords" content="detalle pizza, ingredientes, precio, comprar pizza">
+    <meta name="description" content="Mira los detalles, ingredientes y precio de este producto. ¡Añádelo a tu carrito!">
+    <meta name="keywords" content="detalle producto, ingredientes, precio, comprar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon_io/favicon.ico">
     <link rel="stylesheet" href="../assets/styles.css">
@@ -12,8 +12,8 @@
 <body>
 <div class="container">
     <header>
-        <h1 class="marca">Contactanos</h1>
-        <img src="../assets/img/image-4.png" alt="logo" width="150" height="150" class="d-inline-block align-text-top">
+        <h1 class="marca">Detalle del Producto</h1>
+        <img src="../assets/img/image-2.png" alt="Icono logo pizzería" width="150" height="150" class="d-inline-block align-text-top">
     </header>
 
     <nav>
@@ -21,25 +21,26 @@
         <ul id="main-menu" class="nav-links">
             <li><a href="../index.html"><button>Inicio</button></a></li>
             <li><a href="productos.html"><button>Productos</button></a></li>
-            <li><a href="carrito.html"><button>Carrito</button></a></li>
+            <li><a href="contactanos.html"><button>Contáctanos</button></a></li>
+            
+            <li><a href="carrito.html" aria-label="Ver carrito de compras">
+                <img src="../assets/img/carrito.png" alt="Icono Carrito de compras" width="40" height="40"></a></li>
+                <span id="contador-carrito" class="cart-badge">0</span>
+            
         </ul>
     </nav>
 
     <main>
-        <div class="contact-container">
-            <h2>Formulario de contacto</h2>
-            <form>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+        <h2>Información completa del artículo</h2>
+        
+        <div id="detalleProducto" class="detalle-producto">
+            <p>Cargando detalles del producto...</p>
+        </div>
 
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-
-                <button type="submit">Enviar</button>
-            </form>
+        <div class="opciones-secundarias">
+            <a href="productos.html"><br>
+                <button>← Volver al Catálogo</button>
+            </a>
         </div>
     </main>
 
@@ -47,6 +48,8 @@
         <p>&copy; 2025 | Pizzería | </p>
     </footer>
 </div>
+
+<script type="module" src="../assets/js/detalle.js"></script> 
 <script src="../assets/js/menu.js"></script>
 </body>
 </html>
