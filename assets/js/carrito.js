@@ -118,3 +118,24 @@ export function updateCartCounter() {
     });
 }
 
+/**
+ * Vacía completamente el carrito, devuelve el stock y actualiza el contador.
+ * @returns {boolean} - true si el vaciado fue exitoso.
+ */
+export function clearCart() {
+    const cart = getCart();
+    
+    // 1. Devolver el stock de todos los ítems (Asumiendo que updateProductStock existe)
+    cart.forEach(item => {
+        // Devuelve la cantidad de ítems al stock
+        if (typeof updateProductStock === 'function') {
+            updateProductStock(item.id, item.cantidad);
+        }
+    });
+
+    // 2. Limpiar el LocalStorage y resetear contador
+    localStorage.removeItem(CART_KEY);
+    saveCart([]); // Guarda un carrito vacío y llama a updateCartCounter
+
+    return true;
+}

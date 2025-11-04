@@ -9,10 +9,13 @@
         
     }
     .container {
-        display: grid;/* Usa grid layout para la estructura principal */
-        grid-template-rows: auto 1fr auto;/* Tres filas: header, main, footer */
+    /* ELIMINAR: display: grid; y grid-template-rows: auto 1fr auto; */
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 0 15px; /* Añade un pequeño padding lateral para evitar que el contenido toque el borde */
+}
         
-    }
+    
     nav ul {/* Aplica a la lista dentro de la barra de navegación */
         display: flex;/* Usa flexbox para distribuir los elementos */
         justify-content: space-around;/* Espacio uniforme entre los elementos */
@@ -61,6 +64,10 @@
         color: black; /* Color del texto en el encabezado */
         padding: 10px 0; /* Espaciado interno */
         text-align: center; /* Centra el texto */
+        display: flex; 
+    flex-direction: column; /* Apila el h1 y la imagen */
+    align-items: center; /* Centra el contenido horizontalmente */
+    
     }
     header h1 {
         margin: 0; /* Quita el margen por defecto */
@@ -624,4 +631,8 @@ nav ul a button {
         text-transform: uppercase;
         margin-right: 10px;
     }
+
+    
+
+
 }
