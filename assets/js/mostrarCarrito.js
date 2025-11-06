@@ -6,7 +6,8 @@ import {
     decreaseCartItemQuantity, 
     removeItemFromCart
 } from "./carrito.js";
-import { getProductById } from "./productStore.js"; // <-- Importación agregada
+import { getProductById } from "./productStore.js";
+import { obtenerCotizacionDolarOficialYCalcularTotal } from "./cotizacionDolar.js"; 
 
 const listaCarrito = document.getElementById('lista-carrito');
 const totalCarritoDiv = document.getElementById('total-carrito');
@@ -24,10 +25,11 @@ function mostrarCarrito() {
     if (carrito.length === 0) {
         listaCarrito.innerHTML = '<p class="text-center">Tu carrito está vacío.</p>';
         totalCarritoDiv.innerHTML = '<p class="resumen-total">Total: $0</p>';
+        // primer llamado al js para mostrar la cotizacion con carrito vacio
+        obtenerCotizacionDolarOficialYCalcularTotal(totalPrecio); 
         return;
     }
-
-    // --- 1. Generar la tabla de productos ---
+    
     let tablaHTML = `
         <table class="tabla-carrito">
             <thead>
@@ -42,14 +44,12 @@ function mostrarCarrito() {
     `;
 
     carrito.forEach(itemCarrito => {
-        // Obtener la información del producto, incluido el stock, de la tienda
         const productoEnStore = getProductById(itemCarrito.id); 
         
         const subtotal = itemCarrito.precio * itemCarrito.cantidad;
         totalPrecio += subtotal;
         totalItems += itemCarrito.cantidad;
         
-        // Determinar el stock disponible. Si no se encuentra el producto, asumimos 0.
         const stockDisponible = productoEnStore ? productoEnStore.stock : 0;
         
         tablaHTML += `
@@ -86,13 +86,14 @@ function mostrarCarrito() {
     `;
     listaCarrito.innerHTML = tablaHTML;
 
-    // --- 2. Generar el resumen lateral ---
+    // resumen lateral
     totalCarritoDiv.innerHTML = `
         <p>Items: ${totalItems}</p>
-        <p class="resumen-total">Total: $${totalPrecio.toLocaleString('es-CL')}</p>
+        <p class="resumen-total" data-total-ars="${totalPrecio}">Total: $${totalPrecio.toLocaleString('es-CL')}</p>
     `;
 
-    // --- 3. Agregar listeners para los botones de cantidad y eliminar ---
+    // llamamos devuelta con el total y mostrar cuanto es en dolares
+    obtenerCotizacionDolarOficialYCalcularTotal(totalPrecio);
     
     // Listeners para INCREMENTAR/DECREMENTAR cantidad
     listaCarrito.querySelectorAll('.btn-cantidad').forEach(button => {
@@ -125,14 +126,11 @@ function mostrarCarrito() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    mostrarCarrito();
+    mostrarCarrito(); // Se llama la primera vez aquí
     updateCartCounter();
 
     // Reasigna el listener al botón "Vaciar carrito" (en el resumen)
     btnVaciar.addEventListener('click', () => {
-        // En un escenario de producción, se iteraría el carrito para devolver el stock.
-        // Aquí lo dejamos simple para vaciar el localStorage, aunque la devolución de stock
-        // NO está implementada en esta simple acción de vaciado total.
         localStorage.removeItem("carrito"); 
         
         mostrarCarrito();
