@@ -636,3 +636,19 @@ nav ul a button {
 
 
 }
+
+nav {
+    display: flex;        
+    justify-content: center;
+    align-items: center;    
+    flex-direction: row;  
+    position: relative;
+}
+
+.cart-icon-container {
+    display: flex;
+    align-items: center;
+    position: relative; 
+    z-index: 100; 
+    margin-left: 20px;
+}
