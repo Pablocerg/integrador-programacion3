@@ -1,4 +1,4 @@
-export async function obtenerCotizacionDolarOficialYCalcularTotal(totalARS) { // 🆕 Exportar la función y aceptar totalARS como parámetro
+export async function obtenerCotizacionDolarOficialYCalcularTotal(totalARS) { 
     const url = 'https://dolarapi.com/v1/dolares/oficial';
     const contenedorDolar = document.getElementById('cotizacion-dolar');
         

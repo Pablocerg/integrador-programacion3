@@ -25,8 +25,6 @@ function mostrarCarrito() {
     if (carrito.length === 0) {
         listaCarrito.innerHTML = '<p class="text-center">Tu carrito está vacío.</p>';
         totalCarritoDiv.innerHTML = '<p class="resumen-total">Total: $0</p>';
-        // primer llamado al js para mostrar la cotizacion con carrito vacio
-        obtenerCotizacionDolarOficialYCalcularTotal(totalPrecio); 
         return;
     }
     

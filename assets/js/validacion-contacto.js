@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 1. Capturar el formulario
+    // Capturar el formulario
     const form = document.querySelector("#formulario-contacto");
     
     // Si no se encuentra el formulario, no hacer nada
     if (!form) return;
 
-    // 2. Capturar el evento submit
+    // Capturar el evento submit
     form.addEventListener("submit", validarFormulario); // [cite: 18, 20]
 
     
@@ -21,21 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
         
         function limpiarClases(input) {
-            input.classList.remove('is-invalid', 'is-valid'); // [cite: 34, 33]
+            input.classList.remove('is-invalid', 'is-valid');
         }
-        
         
         limpiarClases(nombreInput);
         limpiarClases(emailInput);
         limpiarClases(mensajeTextarea);
 
-        
         const successMessage = document.getElementById('success-message');
         if (successMessage) {
             successMessage.remove();
         }
-        
-        
+         
         const nombreValor = nombreInput.value.trim();
         
         const nombrePattern = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{3,50}$/; 
@@ -56,8 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             emailInput.classList.add('is-valid');
         }
-
-        
+      
         const mensajeValor = mensajeTextarea.value.trim();
         
         if (mensajeValor.length < 10) {

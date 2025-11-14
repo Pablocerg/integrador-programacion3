@@ -1,4 +1,3 @@
-    // assets/js/detalle.js
     import { getProductById, updateProductStock } from "./productStore.js";
     import { addToCart, updateCartCounter } from "./carrito.js";
 
